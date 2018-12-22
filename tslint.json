@@ -16,6 +16,7 @@
     "trailing-comma": false,
     "member-access": false,
     "object-literal-sort-keys": false,
-    "no-consecutive-blank-lines": false
+    "no-consecutive-blank-lines": false,
+    "no-console": false
   }
 }

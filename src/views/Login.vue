@@ -29,22 +29,21 @@
     </div>
 </template>
 
-<script>
-    import { Vue, Component } from 'vue-property-decorator';
-    import users from '../store/modules/users';
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator';
+import users from '../store/modules/users';
 
-    @Component
-    export default class Login extends Vue {
-        email = '';
-        password = '';
+@Component
+export default class Login extends Vue {
+    email = '';
+    password = '';
 
-        login() {
-            console.log(`logging in with email = ${this.email} amd ${this.password}`);
-            users.login({
-                email: this.email,
-                password: this.password
-            })
-        }
+    login() {
+        console.log(`logging in with email = ${this.email} amd ${this.password}`);
+        users.login({
+            email: this.email,
+            password: this.password
+        });
     }
-
+}
 </script>
