@@ -23,6 +23,10 @@ export interface UserResponse {
 
 }
 
+export interface ProfileResponse {
+    profile: Profile;
+}
+
 export interface Article {
     slug: string;
     title: string;

@@ -71,8 +71,8 @@ export default class extends Vue {
     feed: Article[] = [];
 
     async created() {
-        await articles.refreshGlobalFeed().then(() => {
-            this.feed = articles.globalFeed;
+        await articles.refreshFeed('global').then(() => {
+            this.feed = articles.feed;
         });
     }
 
