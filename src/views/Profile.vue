@@ -87,18 +87,18 @@
 </template>
 
 <script>
-    import { Component, Vue } from 'vue-property-decorator'
-    import  users from '@/store/modules/users'
+    import { Component, Vue } from 'vue-property-decorator';
+    import users from '@/store/modules/users';
 
     @Component
     export default class Profile extends Vue {
 
         created() {
-            users.loadProfile(this.$route.params.username)
+            users.loadProfile(this.$route.params.username);
         }
 
         get profile() {
-            return users.profile
+            return users.profile;
         }
     }
 
