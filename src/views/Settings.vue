@@ -9,16 +9,17 @@
                     <form>
                         <fieldset>
                             <fieldset class="form-group">
-                                <input class="form-control" type="text" placeholder="URL of profile picture">
+                                <input v-model="user.image" class="form-control" type="text" placeholder="URL of profile picture">
                             </fieldset>
                             <fieldset class="form-group">
-                                <input class="form-control form-control-lg" type="text" placeholder="Your Name">
+                                <input v-model="user.username" class="form-control form-control-lg" type="text" placeholder="Your Name">
                             </fieldset>
                             <fieldset class="form-group">
-                                <textarea class="form-control form-control-lg" rows="8" placeholder="Short bio about you"></textarea>
+                                <textarea v-model="user.bio" class="form-control form-control-lg" rows="8"
+                                          placeholder="Short bio about you"></textarea>
                             </fieldset>
                             <fieldset class="form-group">
-                                <input class="form-control form-control-lg" type="text" placeholder="Email">
+                                <input v-model="user.email" class="form-control form-control-lg" type="text" placeholder="Email">
                             </fieldset>
                             <fieldset class="form-group">
                                 <input class="form-control form-control-lg" type="password" placeholder="Password">
@@ -34,3 +35,16 @@
         </div>
     </div>
 </template>
+
+<script>
+    import { Vue, Component } from 'vue-property-decorator';
+    import users from '@/store/modules/users';
+
+    @Component
+    export default class Settings extends Vue {
+
+        get user() {
+            return users.user;
+        }
+    }
+</script>
